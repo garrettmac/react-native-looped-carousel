@@ -3,14 +3,13 @@ import {
   Platform,
   StyleSheet,
   Text,
-  ScrollView,
   TouchableOpacity,
   View,
   TouchableWithoutFeedback,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
-
+import Parallax from 'react-native-parallax';
 
 const PAGE_CHANGE_DELAY = 4000;
 
@@ -335,7 +334,7 @@ export default class Carousel extends Component {
 
     return (
       <View {...containerProps}>
-        <ScrollView
+        <Parallax.ScrollView
           ref={(c) => { this.scrollView = c; }}
           onScrollBeginDrag={this._onScrollBegin}
           onMomentumScrollEnd={this._onScrollEnd}
@@ -358,7 +357,7 @@ export default class Carousel extends Component {
           ]}
         >
           {contents}
-        </ScrollView>
+        </Parallax.ScrollView>
         {this.props.arrows && this._renderArrows(this.state.childrenLength)}
         {this.props.bullets && this._renderBullets(this.state.childrenLength)}
         {this.props.pageInfo && this._renderPageInfo(this.state.childrenLength)}
