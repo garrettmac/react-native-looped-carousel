@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "lodash.isequal": "^4.5.0",
+    "react-native-parallax":"https://github.com/pxue/react-native-parallax",
     "prop-types": "^15.5.10"
   },
   "jest": {
