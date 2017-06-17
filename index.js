@@ -200,7 +200,7 @@ export default class Carousel extends Component {
 
       // Fix bug #50
       if (!nofix && Platform.OS === 'android' && !animated) {
-        this.scrollView.scrollTo({ y: 0, x: offset, animated: true });
+       // this.scrollView.scrollTo({ y: 0, x: offset, animated: true });
       }
     }
   }
